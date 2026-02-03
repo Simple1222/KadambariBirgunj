@@ -13,6 +13,7 @@
             color: #333;
         }
 
+        /* ---------- Header ---------- */
         header {
             background: #2c3e50;
             color: white;
@@ -30,6 +31,7 @@
             font-size: 18px;
         }
 
+        /* ---------- Layout ---------- */
         .container {
             max-width: 1100px;
             margin: 40px auto;
@@ -55,7 +57,7 @@
             color: #2c3e50;
         }
 
-        /* Admission Form */
+        /* ---------- Admission Form ---------- */
         form {
             background: white;
             padding: 30px;
@@ -98,6 +100,7 @@
             background: #219150;
         }
 
+        /* ---------- Footer ---------- */
         footer {
             margin-top: 40px;
             background: #2c3e50;
@@ -105,6 +108,25 @@
             text-align: center;
             padding: 20px;
             font-size: 14px;
+        }
+
+        /* ---------- WhatsApp Button ---------- */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .whatsapp-btn:hover {
+            background: #1ebe5d;
         }
     </style>
 </head>
@@ -120,19 +142,18 @@
     <!-- Main Content -->
     <div class="container">
 
-        <!-- School Information -->
         <div class="info-box">
             <div class="card">
                 <h2>About Our School</h2>
                 <p>
-                    Kadambari Academy is a reputed educational institution committed
-                    to academic excellence and overall student development.
+                    Kadambari Academy is dedicated to quality education,
+                    discipline, and holistic student development.
                 </p>
             </div>
 
             <div class="card">
                 <h2>Total Students</h2>
-                <p><strong>2000+</strong> students currently enrolled</p>
+                <p><strong>2000+</strong> students enrolled</p>
             </div>
 
             <div class="card">
@@ -142,16 +163,16 @@
 
             <div class="card">
                 <h2>Contact</h2>
-                <p>📞 Phone: <strong>98XXXXXXXX</strong></p>
+                <p>📞 Phone: <strong>970-5432273</strong></p>
             </div>
         </div>
 
-        <!-- Online Admission Form -->
+        <!-- Admission Form -->
         <form>
             <h2>Online Admission Form</h2>
 
             <label>Student Full Name</label>
-            <input type="text" placeholder="Enter student name" required>
+            <input type="text" required>
 
             <label>Date of Birth</label>
             <input type="date" required>
@@ -174,15 +195,15 @@
             </select>
 
             <label>Parent / Guardian Name</label>
-            <input type="text" placeholder="Enter parent name" required>
+            <input type="text" required>
 
             <label>Phone Number</label>
-            <input type="tel" placeholder="Enter phone number" required>
+            <input type="tel" required>
 
             <label>Address</label>
-            <textarea rows="3" placeholder="Enter address"></textarea>
+            <textarea rows="3"></textarea>
 
-            <button type="submit">Submit Admission Form</button>
+            <button type="submit">Submit Admission</button>
         </form>
 
     </div>
@@ -192,5 +213,13 @@
         © 2026 Kadambari Academy | Principal: Sabba
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <a 
+        href="https://wa.me/9705432273"
+        class="whatsapp-btn"
+        target="_blank">
+        💬 WhatsApp Admission
+    </a>
+
 </body>
-</html>
+                                   </html>
