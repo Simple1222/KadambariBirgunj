@@ -1,225 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kadambari Academy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kadambari Academy</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f6fb;
-            color: #333;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-        /* ---------- Header ---------- */
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-        }
+    header {
+      background: linear-gradient(90deg, #2b5876, #4e4376);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-        }
+    section {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        /* ---------- Layout ---------- */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+    h2 {
+      color: #2b5876;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
 
-        .info-box {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
 
-        .card h2 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
+    form {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
 
-        /* ---------- Admission Form ---------- */
-        form {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
 
-        form h2 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
+    button {
+      background: #25D366;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
 
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
+    button:hover {
+      background: #1ebe5b;
+    }
 
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
+    footer {
+      background: #2b5876;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
 
-        button {
-            margin-top: 20px;
-            padding: 12px;
-            width: 100%;
-            border: none;
-            border-radius: 6px;
-            background: #27ae60;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
+    /* Floating WhatsApp Button */
+    .float-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 18px;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 1000;
+    }
 
-        button:hover {
-            background: #219150;
-        }
-
-        /* ---------- Footer ---------- */
-        footer {
-            margin-top: 40px;
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        /* ---------- WhatsApp Button ---------- */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            padding: 14px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-
-        .whatsapp-btn:hover {
-            background: #1ebe5d;
-        }
-    </style>
+    .float-button i {
+      font-size: 24px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Kadambari Academy</h1>
-        <p>Learning Today, Leading Tomorrow</p>
-    </header>
+<header>
+  <h1>Kadambari Academy</h1>
+  <p>Quality Education • Fast & Save Time Service</p>
+  <p>Principal: <b>Sabba</b> | Total Students: <b>2000+</b></p>
+</header>
 
-    <!-- Main Content -->
-    <div class="container">
+<section>
+  <h2>About Us</h2>
+  <p>
+    Kadambari Academy is committed to providing quality education with modern
+    teaching methods, experienced teachers, and student-focused learning.
+    Our fast admission system saves time and ensures smooth enrollment.
+  </p>
+</section>
 
-        <div class="info-box">
-            <div class="card">
-                <h2>About Our School</h2>
-                <p>
-                    Kadambari Academy is dedicated to quality education,
-                    discipline, and holistic student development.
-                </p>
-            </div>
+<section>
+  <h2>Extra-Curricular Activities (ECA)</h2>
+  <div class="cards">
+    <div class="card">💃 Dance Class</div>
+    <div class="card">🎵 Music</div>
+    <div class="card">⚽ Sports</div>
+    <div class="card">🎨 Art & Drawing</div>
+    <div class="card">🧠 AI & Computer Class</div>
+  </div>
+</section>
 
-            <div class="card">
-                <h2>Total Students</h2>
-                <p><strong>2000+</strong> students enrolled</p>
-            </div>
+<section>
+  <h2>Our Teachers</h2>
+  <div class="cards">
+    <div class="card">Syam Sir</div>
+    <div class="card">Rakesh Sir</div>
+    <div class="card">Anil Sir</div>
+    <div class="card">Rajesh Sir</div>
+    <div class="card">Rabindra Sir</div>
+  </div>
+</section>
 
-            <div class="card">
-                <h2>Principal</h2>
-                <p><strong>Sabba</strong></p>
-            </div>
+<section>
+  <h2>Online Admission</h2>
 
-            <div class="card">
-                <h2>Contact</h2>
-                <p>📞 Phone: <strong>970-5432273</strong></p>
-            </div>
-        </div>
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Student Name" required />
+    <input type="number" id="age" placeholder="Age" required />
+    <input type="text" id="class" placeholder="Class Applying For" required />
+    <input type="tel" id="phone" placeholder="Parent Contact Number" required />
 
-        <!-- Admission Form -->
-        <form>
-            <h2>Online Admission Form</h2>
+    <button type="submit">Apply for Admission</button>
+  </form>
+</section>
 
-            <label>Student Full Name</label>
-            <input type="text" required>
+<footer>
+  Contact: 9705432273 <br>
+  © 2026 Kadambari Academy <br>
+  Made by Raiyan
+</footer>
 
-            <label>Date of Birth</label>
-            <input type="date" required>
+<!-- Floating WhatsApp Button -->
+<a
+  href="https://wa.me/9779705432273"
+  class="float-button"
+  target="_blank"
+>
+  <i class="fa fa-whatsapp"></i>
+  WhatsApp
+</a>
 
-            <label>Class Applying For</label>
-            <select required>
-                <option value="">Select Class</option>
-                <option>Nursery</option>
-                <option>KG</option>
-                <option>Class 1</option>
-                <option>Class 2</option>
-                <option>Class 3</option>
-                <option>Class 4</option>
-                <option>Class 5</option>
-                <option>Class 6</option>
-                <option>Class 7</option>
-                <option>Class 8</option>
-                <option>Class 9</option>
-                <option>Class 10</option>
-            </select>
+<script>
+  function sendToWhatsApp() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let cls = document.getElementById("class").value;
+    let phone = document.getElementById("phone").value;
 
-            <label>Parent / Guardian Name</label>
-            <input type="text" required>
+    let message =
+      "📚 *New Admission Request* %0A" +
+      "Name: " + name + "%0A" +
+      "Age: " + age + "%0A" +
+      "Class: " + cls + "%0A" +
+      "Contact: " + phone;
 
-            <label>Phone Number</label>
-            <input type="tel" required>
-
-            <label>Address</label>
-            <textarea rows="3"></textarea>
-
-            <button type="submit">Submit Admission</button>
-        </form>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        © 2026 Kadambari Academy | Principal: Sabba
-    </footer>
-
-    <!-- WhatsApp Floating Button -->
-    <a 
-        href="https://wa.me/9705432273"
-        class="whatsapp-btn"
-        target="_blank">
-        💬 WhatsApp Admission
-    </a>
+    let url = "https://wa.me/9779705432273?text=" + message;
+    window.open(url, "_blank");
+  }
+</script>
 
 </body>
-                                   </html>
+</html>
